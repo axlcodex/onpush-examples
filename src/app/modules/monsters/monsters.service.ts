@@ -25,4 +25,9 @@ export class MonstersService {
   getMonsters(): void {
     this.monstersSubject.next(this.monstersMock);
   }
+
+  removeMonster(): void {
+    this.monstersMock.shift();
+    this.monstersSubject.next(this.monstersMock);
+  }
 }
