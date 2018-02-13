@@ -2,9 +2,9 @@
 <div class="row text-center">
   <div class="col-lg-12">
     <ul class="list-group">
-      <li class="list-group-item" *ngFor="let monster of (monstersSrv.monsters$ | async)">
-        <span>{{ monster.name }}</span>
-        <button class="btn btn-danger" (click)="checkContent()">Check</button>
+      <li class="list-group-item">
+        <p>{{ (monstersSrv.monster$ | async).name }}</p>
+        <button class="btn btn-danger" (click)="changeName()">Change Name</button>
       </li>
     </ul>
   </div>

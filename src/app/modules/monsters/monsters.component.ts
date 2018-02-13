@@ -31,7 +31,7 @@ export class MonstersComponent implements OnChanges, AfterViewChecked, AfterCont
     console.log('On Do Check');
   }
 
-  checkContent(): void {
-    this.monstersSrv.removeMonster();
+  changeName(): void {
+    this.monstersSrv.changeName();
   }
 }
