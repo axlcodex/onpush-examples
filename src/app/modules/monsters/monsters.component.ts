@@ -1,4 +1,7 @@
-import { AfterContentChecked, AfterViewChecked, ChangeDetectionStrategy, Component, OnChanges } from '@angular/core';
+import {
+  AfterContentChecked, AfterViewChecked, ChangeDetectionStrategy, Component, DoCheck,
+  OnChanges
+} from '@angular/core';
 import { MonstersService } from './monsters.service';
 
 @Component({
@@ -7,7 +10,7 @@ import { MonstersService } from './monsters.service';
   styleUrls: ['./monsters.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class MonstersComponent implements OnChanges, AfterViewChecked, AfterContentChecked {
+export class MonstersComponent implements OnChanges, AfterViewChecked, AfterContentChecked, DoCheck {
   constructor(public monstersSrv: MonstersService) {
     this.monstersSrv.getMonsters();
   }
@@ -22,5 +25,9 @@ export class MonstersComponent implements OnChanges, AfterViewChecked, AfterCont
 
   ngOnChanges(): void {
     console.log('On Changes');
+  }
+
+  ngDoCheck(): void {
+    console.log('On Do Check');
   }
 }
