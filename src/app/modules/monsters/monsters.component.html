@@ -1,0 +1,8 @@
+<h2 class="text-center">The Scary List!</h2>
+<div class="row text-center">
+  <div class="col-lg-12">
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let monster of (monstersSrv.monsters$ | async)">{{ monster.name }}</li>
+    </ul>
+  </div>
+</div>
