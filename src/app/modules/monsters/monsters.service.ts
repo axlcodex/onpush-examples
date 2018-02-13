@@ -17,12 +17,14 @@ export class MonstersService {
     this.monster$ = this.monsterSubject.asObservable();
   }
 
-  getMonsters(): void {
+  createMonster(): void {
     this.monsterSubject.next(this.monsterMock);
   }
 
   changeName(): void {
-    this.monsterMock.name = 'Dracula';
-    this.monsterSubject.next(this.monsterMock);
+    const monster = {
+      name: 'Dracula'
+    };
+    this.monsterSubject.next(monster);
   }
 }

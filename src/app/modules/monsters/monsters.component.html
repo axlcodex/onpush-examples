@@ -3,7 +3,7 @@
   <div class="col-lg-12">
     <ul class="list-group">
       <li class="list-group-item">
-        <p>{{ (monstersSrv.monster$ | async).name }}</p>
+        <monster [monster]="monstersSrv.monster$ | async"></monster>
         <button class="btn btn-danger" (click)="changeName()">Change Name</button>
       </li>
     </ul>
