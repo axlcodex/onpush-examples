@@ -4,12 +4,12 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'monsters',
+    redirectTo: 'robot-factory',
     pathMatch: 'full'
   },
   {
-    path: 'monsters',
-    loadChildren: 'app/modules/monsters/monsters.module#MonstersModule'
+    path: 'robot-factory',
+    loadChildren: 'app/modules/robot-factory/robot-factory.module#RobotFactoryModule'
   }
 ];
 
