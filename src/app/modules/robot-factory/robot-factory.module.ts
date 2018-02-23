@@ -8,9 +8,13 @@ import { LegComponent } from './body/leg/leg.component';
 import { RobotWeaponComponent } from './weapon/robot-weapon.component';
 import { WeaponBuilderComponent } from './weapon/builder/weapon-builder.component';
 import { GalleryComponent } from './weapon/gallery/gallery.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
-  imports: [RobotFactoryRoutingModule],
+  imports: [
+    CommonModule,
+    RobotFactoryRoutingModule
+  ],
   declarations: [
     RobotFactoryComponent,
     RobotBodyComponent,

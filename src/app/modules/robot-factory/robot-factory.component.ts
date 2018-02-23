@@ -1,19 +1,16 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { Component } from '@angular/core';
+
+import { RobotFactoryService } from './robot-factory.service';
 
 @Component({
   selector: 'app-robot-factory',
-  templateUrl: './robot-factory.component.html'
+  templateUrl: './robot-factory.component.html',
+  providers: [RobotFactoryService]
 })
 export class RobotFactoryComponent {
-  robot: any;
-
-  constructor() {
-    this.robot = {
-      name: 'Default Name'
-    };
-  }
+  constructor(public robotFactorySrv: RobotFactoryService) { }
 
   setModelName(name: string): void {
-    this.robot.name = name;
+    this.robotFactorySrv.setName(name);
   }
 }

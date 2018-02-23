@@ -6,6 +6,6 @@
 </div>
 <br>
 <div class="row">
-  <app-robot-body [robot]="robot" class="col-md-6 text-center"></app-robot-body>
+  <app-robot-body [robot]="robotFactorySrv.robot$ | async" class="col-md-6 text-center"></app-robot-body>
   <app-robot-weapon class="col-md-6 text-center"></app-robot-weapon>
 </div>
