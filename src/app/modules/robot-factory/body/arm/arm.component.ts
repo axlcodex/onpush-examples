@@ -1,8 +1,9 @@
-import { AfterViewChecked, Component, OnChanges } from '@angular/core';
+import { AfterViewChecked, ChangeDetectionStrategy, Component, Input, OnChanges } from '@angular/core';
 
 @Component({
   selector: 'app-arm',
-  templateUrl: './arm.component.html'
+  templateUrl: './arm.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ArmComponent implements AfterViewChecked {
   ngAfterViewChecked(): void {

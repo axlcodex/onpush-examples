@@ -5,13 +5,15 @@ import { Component } from '@angular/core';
   templateUrl: './robot-factory.component.html'
 })
 export class RobotFactoryComponent {
-  name: string;
+  robot: any;
 
   constructor() {
-    this.name = '';
+    this.robot = {
+      name: 'Default Name'
+    };
   }
 
-  setModel(name: string): void {
-    this.name = name;
+  setModelName(name: string): void {
+    this.robot.name = name;
   }
 }
