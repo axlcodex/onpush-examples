@@ -5,13 +5,15 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   templateUrl: './robot-factory.component.html'
 })
 export class RobotFactoryComponent {
-  robot: string;
+  robot: any;
 
   constructor() {
-    this.robot = 'Default Name';
+    this.robot = {
+      name: 'Default Name'
+    };
   }
 
   setModelName(name: string): void {
-    this.robot = name;
+    this.robot.name = name;
   }
 }
